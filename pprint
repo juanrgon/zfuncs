@@ -1,0 +1,17 @@
+case $(whatis $1) in
+    (array-special)
+        for el in $1
+        do
+            echo $el
+        done
+        ;;
+    (array)
+        for el in $1
+        do
+            echo $el
+        done
+        ;;
+    (scalar)
+        echo $1
+        ;;
+esac

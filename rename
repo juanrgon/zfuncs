@@ -1,0 +1,13 @@
+autoload -U _rename_func
+orig=$1
+new=$2
+
+argument=$orig
+case $(whatis argument) in
+    (function)
+        _rename_func $orig $new
+        ;;
+    (reserved)
+        exit 1
+        ;;
+esac

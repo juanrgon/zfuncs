@@ -1,0 +1,10 @@
+for word in $(type -w $1)
+    do
+        _type=$word
+    done
+
+if [[ $_type == none ]]; then
+    _type=$(print -rl -- ${(t)1})
+fi
+
+echo $_type

@@ -1,0 +1,10 @@
+orig=$1
+new=$2
+
+tmpfile=$(mktemp)
+echo "$1()" > tmpfile
+
+declare -f orig | tail -n +2 >> tmpfile
+
+source tmpfile
+new() { orig_theirfunc }
