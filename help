@@ -1,0 +1,8 @@
+usage: zfuncs [OPTIONS] [COMMANDS]
+
+OPTIONS:
+  --help    Display this help message
+
+COMMANDS:
+  list      List all functions loaded by zfuncs
+  edit      Edit a function loaded by zfuncs
